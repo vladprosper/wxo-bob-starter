@@ -9,6 +9,27 @@ This repository grew out of a document-workflow teaching exercise. Its most
 useful lesson was concrete: a visible PDF, a healthy container and a plausible
 agent answer are three different kinds of evidence.
 
+## What you need
+
+**Offline tools:** Python 3.11+ and this checkout are sufficient for staging,
+evaluating supplied extraction outputs and checking supplied readiness snapshots.
+No IBM account, Bob, ADK, runtime or model access is required for those commands.
+
+**Live Bob–Orchestrate workflow:** you need authorized
+[IBM Bob access and installation](https://bob.ibm.com/docs/ide/getting-started/install),
+a compatible [Orchestrate Agent Development Kit (ADK)](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
+installed and available to Bob, and authorized access to a suitable Orchestrate
+environment. You can use an existing shared environment if its owner grants the
+required access; each reader does not need to provision a new personal instance.
+For example, workshop participants can use their organization's development
+environment while running the offline evaluator on their own laptops.
+
+This starter supplies project configuration, not IBM software, accounts,
+licenses, credentials or a provisioned runtime. You or your administrator arrange
+access, provisioning when needed, credentials and any service charges. See the
+[setup prerequisites](docs/STARTER.md#prerequisites) for environment choices,
+installation links and the additional requirements for local Developer Edition.
+
 ## Choose a starting point
 
 | Your task | Use | What you get |

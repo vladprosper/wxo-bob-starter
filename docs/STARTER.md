@@ -8,11 +8,45 @@ boundary. Bob's permission system and your environment remain authoritative.
 
 ## Prerequisites
 
-Offline staging needs Python 3.11+ and this checkout. Using the staged project
-requires IBM Bob, a compatible Orchestrate ADK/runtime, an authorized development
-interface and access to the applicable documentation. Model inference may be
-remote even when the deployment endpoint is local. Existing service access can
-have costs; none of the offline commands initiates it.
+Offline staging, evaluation and snapshot checks need only Python 3.11+ and this
+checkout. They make no IBM or model calls and require no IBM account.
+
+Before using the staged project for a live workflow, arrange:
+
+1. **IBM Bob:** authorized access and an installed client. Follow IBM's
+   [installation and sign-in guide](https://bob.ibm.com/docs/ide/getting-started/install).
+   Bob access is separate from this repository and Orchestrate access; this
+   package does not include a subscription or promise free access.
+2. **Orchestrate ADK:** a compatible installation available to Bob's execution
+   environment. Follow [IBM's ADK installation and environment guide](https://developer.watson-orchestrate.ibm.com/getting_started/installing).
+   Manual preinstallation is not the only route: IBM's
+   [Bob workflow tutorial](https://developer.ibm.com/tutorials/build-ai-agents-business-requirements-bob-watsonx-orchestrate/)
+   describes workspace initialization that can install or update the ADK.
+   Review that separate setup action before using it. Our `stage` command does
+   not install or update the ADK.
+3. **An authorized Orchestrate target:** an existing shared environment is fine
+   when its owner permits the intended queries and development. Provision a new
+   environment only if needed. Use the IBM guide for your SaaS or on-premises
+   target and its authentication method; obtain the endpoint and appropriate
+   credentials through the environment owner. Record nonsecret target details
+   in the project profile, never credential values.
+
+For a local target, follow the current
+[Developer Edition setup guide](https://developer.watson-orchestrate.ibm.com/developer_edition/wxOde_setup).
+Developer Edition requires a valid license and access to an inference provider,
+as well as the documented machine requirements. A local runtime does not imply
+local inference or zero service cost. For example, installing the ADK on a laptop
+does not by itself supply the runtime or model access needed to extract a PDF.
+
+You or your administrator are responsible for provisioning, access entitlements,
+credential handling and applicable Bob, runtime and inference charges. Review
+current IBM terms and your organization's arrangements before starting services.
+This repository provides none of those resources and changes no runtime settings.
+
+These official setup links were checked on 2026-10-20. No minimum Bob or ADK
+version has been verified for this starter. Record the versions actually used and
+complete the acceptance checks; historical ADK 2.17.0 troubleshooting notes are
+not a supported-version declaration.
 
 ## New project
 

@@ -4,6 +4,23 @@ These checks are pending until performed in the intended Bob installation.
 Offline fixture results do not satisfy them. Use an isolated authorized project;
 do not change a working runtime merely to make the starter's examples pass.
 
+Before starting, confirm authorized Bob access, a compatible ADK installed and
+available to Bob, and an authorized Orchestrate target with the credentials and
+permissions needed for the planned checks. An existing shared development
+environment is sufficient; a new personal instance is not required. The owner or
+administrator supplies access and approves any provisioning and costs. For
+installation, use IBM's [Bob guide](https://bob.ibm.com/docs/ide/getting-started/install)
+and [ADK/environment guide](https://developer.watson-orchestrate.ibm.com/getting_started/installing).
+Local Developer Edition additionally requires its documented license, inference
+provider and machine prerequisites in the
+[official setup guide](https://developer.watson-orchestrate.ibm.com/developer_edition/wxOde_setup).
+
+Offline staging installs none of these products. If a prerequisite is missing,
+record the affected live checks as unverified and resolve setup separately; do
+not treat this acceptance checklist as authorization to install or provision.
+There is no verified minimum Bob/ADK version for this starter. Record actual
+versions below. The offline evaluator remains usable with Python 3.11+ alone.
+
 Start a fresh Bob task in the staged project, select WXO Agent Architect and ask:
 
 > Load wxo-agent-architect and read my project profile. Check setup only. Report

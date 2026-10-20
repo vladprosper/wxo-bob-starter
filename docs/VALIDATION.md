@@ -59,3 +59,11 @@ The readiness checker trusts the supplied observations and service selection.
 Neither test suite certifies production deployment, authentication, data isolation,
 FIPS compliance, or general model accuracy. See BOB_ACCEPTANCE.md for the separate
 live verification work.
+
+## Hosted checkout correction
+
+The first hosted run passed Linux but Windows package checks detected altered
+PDF bytes after checkout. Small generated PDFs can be classified as text by Git.
+Explicit `.gitattributes` now marks PDFs binary and keeps text line endings LF.
+The byte-level manifest check remains strict; it was not relaxed to mask this
+failure. A fresh checkout with `core.autocrlf=true` is checked before republishing.

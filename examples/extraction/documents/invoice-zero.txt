@@ -1,0 +1,8 @@
+SYNTHETIC INVOICE - Harbor Demo Supplies
+Invoice: 00043-B
+Client: Cedar Example Studio
+Statement date: 2026-10-02
+Due date: 2026-11-01
+Charges: USD 75.00
+Credit applied: USD 75.00
+TOTAL AMOUNT DUE: USD 0.00

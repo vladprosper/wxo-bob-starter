@@ -1,0 +1,6 @@
+SYNTHETIC INVOICE - Harbor Demo Supplies
+Invoice: 00044-C
+Client: Cedar Example Studio
+Statement date: 2026-10-03
+Due date: not supplied
+TOTAL AMOUNT DUE: USD 15.50

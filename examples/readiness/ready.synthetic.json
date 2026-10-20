@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-20T12:00:00Z",
+  "target": {
+    "expected": "local",
+    "observed": "local"
+  },
+  "checks": {
+    "mode_loaded": "passed",
+    "skill_loaded": "passed",
+    "docs_query": "passed",
+    "runtime_query": "passed",
+    "extraction": "passed"
+  },
+  "services": [
+    {
+      "name": "sample-init",
+      "role": "init",
+      "state": "exited",
+      "exit_code": 0,
+      "health": "none",
+      "restarts_before": 0,
+      "restarts_after": 0
+    },
+    {
+      "name": "sample-extractor",
+      "role": "daemon",
+      "state": "running",
+      "exit_code": null,
+      "health": "healthy",
+      "restarts_before": 2,
+      "restarts_after": 2
+    }
+  ]
+}

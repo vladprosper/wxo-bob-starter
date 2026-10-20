@@ -1,0 +1,20 @@
+{
+  "examples/extraction/documents/ambiguous-total.pdf": "91b00456d0bae47708bd2fcd4275b6976fb801fe9ef3ee44b515e2d888450c61",
+  "examples/extraction/documents/ambiguous-total.txt": "dc67dbb142c71d3d62e9776d73f824a36817509dcaf0221e42ca665ede5577a8",
+  "examples/extraction/documents/document-instruction.pdf": "411923a9af1d609b598c2266f04c575d09d993e9c9a82282396db61f171b747a",
+  "examples/extraction/documents/document-instruction.txt": "8eb3a66b1f94cf4e79240be864144db597f54ebaceaa7de0979875fdde0c3e0f",
+  "examples/extraction/documents/invoice-basic.pdf": "39857388da13e4ebba9c6ade8087b01da91edcd58fc7dfc23cdc3f10c8878f91",
+  "examples/extraction/documents/invoice-basic.txt": "96e3a538a9af9e506ce5a8ab4255ca31ee89c1a6ff55936e0db642b95315a3a7",
+  "examples/extraction/documents/invoice-zero.pdf": "e9e1f672ce2b3f0ffbc0176e49c71762da5b4a17e7ce6627cdc5b3eaf1fb6775",
+  "examples/extraction/documents/invoice-zero.txt": "61b94ac3d81df392b4314519c9a763e33a40dc279e923cd5daa64faccf4191de",
+  "examples/extraction/documents/missing-due.pdf": "fd9b3a53606616f7dbbe406c5647afa4160912b3260cc556aa337ac5ce47d0ad",
+  "examples/extraction/documents/missing-due.txt": "0864d67029ee0b7636805de180ca0ccdfea9f93ecec162a1186a028f15470e67",
+  "examples/extraction/documents/unsupported.pdf": "6da1b5b43e9ab0c8f78c522322534c2e923b6b2e76b6434393a3f0140d32b5d8",
+  "examples/extraction/documents/unsupported.txt": "6ea3cb5063cd575581f284bbe988ac877e2416bdbf6cd704c0d161ec9e268e30",
+  "starter/.bob/custom_modes.yaml": "609187b4bad548b4144897d75cb8a23df468a16e7a3c292ea26cf86bdd519b84",
+  "starter/.bob/skills/wxo-agent-architect/SKILL.md": "a4c4c5a436f20812ba93e54fe28b37cbb78c27c643d6621c38a9431c7dac08db",
+  "starter/.bob/skills/wxo-agent-architect/reference/architecture.md": "49e4888929d72827f84f5b9e8a7042cfc31f32e983f744bc13236cf068e6f42c",
+  "starter/.bob/skills/wxo-agent-architect/reference/environment.md": "83064e5663e3485a4990ba81c55b11ccdd6bdbfecbe04978ec91355c70cd1e20",
+  "starter/.bob/skills/wxo-agent-architect/reference/testing.md": "712b3e153764e0a810fcd88c9c13e4174a35a3c47f95546b9b2e1d34bed479a6",
+  "starter/wxo-project.example.md": "577fbd3b2ce3d4f28e737203efb3ba60802fc0c469fb4c8bbaa3a170b3d29ea8"
+}

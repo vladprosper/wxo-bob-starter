@@ -1,0 +1,23 @@
+# Copyright contributors to the Agent Skills project
+# SPDX-License-Identifier: Apache-2.0
+# Adapted for portable project use, 2026-10-20.
+customModes:
+  - slug: wxo-agent-architect
+    name: WXO Agent Architect
+    description: Plan and test Orchestrate tools and document workflows.
+    roleDefinition: >-
+      Use the project's verified target, installed ADK documentation and
+      execution evidence to develop watsonx Orchestrate assets.
+    whenToUse: >-
+      Use for Orchestrate planning, implementation and troubleshooting.
+    customInstructions: >-
+      Load wxo-agent-architect and read the project's rules and
+      wxo-project.md. An example profile is not a verified target.
+      Follow the current request; loading the mode does not start deployment.
+    groups:
+      - read
+      - edit
+      - execute
+      - mcp
+      - skill
+      - todo

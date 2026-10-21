@@ -37,6 +37,10 @@ def run():
         r=subprocess.run([str(python),'-m','wxo_starter','stage',str(target)],cwd=work,capture_output=True,text=True)
         assert r.returncode==2 and (target/'.bob/custom_modes.yaml').read_bytes()==before
         assert (target/'docs/BOB_ACCEPTANCE.md').exists()
+        assert (target/'docs/OUTPUT_CONTRACT.md').exists()
+        assert (target/'prompts/README.md').exists()
+        assert not (target/'docs/EVALUATION.md').exists()
+        assert not (target/'examples').exists()
         r=subprocess.run([str(python),'-m','wxo_starter','readiness','examples/readiness/restart.synthetic.json','--as-of','2026-10-20T12:30:00Z'],cwd=work,capture_output=True,text=True)
         assert r.returncode==1 and json.loads(r.stdout)['status']=='failed'
         print(f'Fresh-user check passed: {len(commands)} README commands, repeat-stage refusal, negative readiness; no pip packages installed.')

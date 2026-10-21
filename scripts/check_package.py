@@ -12,7 +12,7 @@ def check():
     manifest = json.loads((ROOT / 'manifest.json').read_text(encoding='utf-8'))
     for name, digest in manifest.items():
         assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest, f'Changed reviewed asset: {name}'
-    for doc in [ROOT/'README.md', ROOT/'PROVENANCE.md', *ROOT.glob('docs/*.md'), *ROOT.glob('starter/**/*.md')]:
+    for doc in [ROOT/'README.md', ROOT/'PROVENANCE.md', *ROOT.glob('docs/*.md'), *ROOT.glob('prompts/*.md'), *ROOT.glob('starter/**/*.md')]:
         content = doc.read_text(encoding='utf-8')
         for link in re.findall(r'\]\(([^)]+)\)', content):
             if '://' in link or link.startswith('#'):

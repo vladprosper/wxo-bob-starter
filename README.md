@@ -30,6 +30,19 @@ access, provisioning when needed, credentials and any service charges. See the
 [setup prerequisites](docs/STARTER.md#prerequisites) for environment choices,
 installation links and the additional requirements for local Developer Edition.
 
+## Build with Bob
+
+Start the [six-step Build with Bob walkthrough](prompts/README.md) to verify your
+environment, prove a tool invocation, plan and build an agentic document workflow,
+capture genuine outputs, then diagnose and retest. Each step provides copy-and-paste
+prompts, inputs, expected artifacts, review gates and stopping conditions.
+The [worked scenario](prompts/WORKED_SCENARIO.md) explains recommended uses with
+concrete examples. These prompts are reviewed, **not live-validated**.
+
+Keep the extraction workspace separate from answer keys and evaluator reports.
+Use the [answer-free output contract](docs/OUTPUT_CONTRACT.md) with Bob, not the
+answer-bearing evaluation guide. The walkthrough explains this separation.
+
 ## Choose a starting point
 
 | Your task | Use | What you get |
@@ -81,7 +94,8 @@ ADK, create credentials, or deploy an agent. It refuses existing directories,
 including empty ones, to avoid overwriting configuration. Existing-project
 installation requires the manual merge described in [the starter guide](docs/STARTER.md).
 
-Fill `wxo-project.md` from the example, then perform the
+Fill `wxo-project.md` from the example, then follow the
+[Build with Bob walkthrough](prompts/README.md) and record the
 [Bob acceptance checks](docs/BOB_ACCEPTANCE.md). Generated files cannot prove
 skill activation, documentation access or successful tool invocation.
 

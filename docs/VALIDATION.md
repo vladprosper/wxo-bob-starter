@@ -67,3 +67,30 @@ PDF bytes after checkout. Small generated PDFs can be classified as text by Git.
 Explicit `.gitattributes` now marks PDFs binary and keeps text line endings LF.
 The byte-level manifest check remains strict; it was not relaxed to mask this
 failure. A fresh checkout with `core.autocrlf=true` is checked before republishing.
+
+## Build with Bob walkthrough repair — 2026-10-21
+
+The six-step walkthrough adds task prompts, review gates, a worked scenario and
+five troubleshooting prompts. Staging includes these guides and an answer-free
+output contract, but excludes fixture answers, predictions and evaluation reports.
+Prompts are reviewed, not live-validated. No Bob or Orchestrate request was made.
+
+Offline verification for this repair: 29 unittest methods (25 existing plus four
+documentation/staging tests), package manifest/link checks, the five README
+commands in a copied checkout and fresh no-package virtual environment, and YAML
+syntax/negative-mutation checks passed. Intentional bad-prediction exit 1 and
+repeat-stage refusal exit 2 are expected, not test failures.
+
+Independent model review found and corrected a single-PDF/full-answer-key mismatch,
+an ambiguous JSON-size limit and an omitted monetary leading-zero restriction.
+Staged guide links and exclusion of answer-bearing files were inspected. The new
+static leakage check initially flagged the required issue-code word `unsupported`,
+which is also a fixture ID; it now permits that schema keyword while still checking
+fixture-specific identifiers, names, dates and selected amounts. This check is a
+regression aid, not a guarantee against contamination or a model-security boundary.
+The illustrative JSON row is parsed by the actual contract validator in tests.
+
+The repair preserves raw-output capture, approval boundaries and separate live
+acceptance. Public synthetic fixtures remain known-case regression material;
+held-out documents are needed for an unseen evaluation. Hosted CI for the published
+commit must be checked separately; this local record does not imply it passed.

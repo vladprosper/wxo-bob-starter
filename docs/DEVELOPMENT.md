@@ -25,7 +25,10 @@ python3 scripts/fresh_user_check.py
 ```
 
 `check_package.py` checks the maintained starter against its reviewed file
-manifest, local Markdown links and fixture coverage. A changed template requires
+manifest, local Markdown links (including the prompt walkthrough) and fixture coverage.
+The prompt documentation tests check six-step structure, staged guide links,
+exclusion of answer-bearing files and selected fixture-specific answer leakage.
+These are static regression checks, not a security boundary or live prompt test. A changed template requires
 review and a refreshed manifest. It is not a general-purpose YAML validator.
 CI also parses YAML using PyYAML as a development-only dependency.
 

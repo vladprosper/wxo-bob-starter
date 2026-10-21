@@ -21,6 +21,9 @@ not treat this acceptance checklist as authorization to install or provision.
 There is no verified minimum Bob/ADK version for this starter. Record actual
 versions below. The offline evaluator remains usable with Python 3.11+ alone.
 
+Use the staged [Build with Bob walkthrough](../prompts/README.md) for the full
+sequence. Its prompts are reviewed but not live-validated.
+
 Start a fresh Bob task in the staged project, select WXO Agent Architect and ask:
 
 > Load wxo-agent-architect and read my project profile. Check setup only. Report
@@ -40,10 +43,10 @@ returned value and agent response. Then run a deliberately invalid input and
 confirm the documented failure behavior. Preserve generated source and test
 results. This repository does not supply that deployed agent.
 
-Keep the source checkout: staging copies the Bob configuration and this guide,
+Keep the source checkout: staging copies Bob configuration, prompts, the clean contract and this guide,
 not the evaluator or fixtures. The following paths and command are relative to
 the original wxo-bob-starter checkout. Use PDFs in
-`examples/extraction/documents/`, the contract in `docs/EVALUATION.md`, and
+`examples/extraction/documents/`, the answer-free contract in `docs/OUTPUT_CONTRACT.md`, and
 `examples/extraction/expected.json` as the answer key. After saving mapped results
 as `output/predictions.json`, run from that checkout:
 
@@ -52,7 +55,10 @@ python3 -m wxo_starter evaluate --expected examples/extraction/expected.json --a
 ```
 
 For extraction acceptance, send only the synthetic input PDFs to your workflow.
-Keep expected.json outside the agent's context. Capture the actual workflow JSON,
+Keep expected.json, predictions-*.synthetic.json, docs/EVALUATION.md and comparison
+reports outside the agent's context. Open only the staged project for extraction,
+not the full source checkout. Public fixtures are known-case regression tests,
+not evidence of blind evaluation. Capture the actual workflow JSON,
 normalize it to the evaluator contract with a documented mapping, and run the
 comparison. Preserve the original payload so mapping cannot hide missing fields.
 Check the agent's prose separately for dropped warnings or changed amounts.

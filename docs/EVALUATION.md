@@ -5,6 +5,10 @@ values after changing a workflow. For example, changing a prompt to improve one
 invoice must not cause another invoice's zero balance to become null.
 Do not use six synthetic cases to claim a general extraction accuracy rate.
 
+**Evaluator-only material:** this guide contains fixture answers. Do not attach it
+to the extraction task. Give that task [OUTPUT_CONTRACT.md](OUTPUT_CONTRACT.md)
+instead. Keep evaluator reports and synthetic predictions separate too.
+
 ## Inputs and expected values
 
 `examples/extraction/documents/` contains six synthetic documents as readable
@@ -27,31 +31,10 @@ resistance. No real customer names, bills or accounts are included.
 
 ## Contract version 1
 
-Top-level keys are exactly `schema_version: 1` and `results` (1–1000 entries).
-Each result has exactly `case_id`, `status`, `fields`, `issues`. Case IDs are
-unique lowercase letters/digits/hyphens/underscores, 1–64 characters.
-
-All six field keys must be present. Values are strings or JSON null:
-
-| Field | Format and meaning |
-|---|---|
-| document_id | Identifier printed on the document; retain leading zeros and punctuation |
-| client_name | Client, not issuer; exact spelling from the source |
-| statement_date | Valid date in YYYY-MM-DD format |
-| due_date | Valid date in YYYY-MM-DD format |
-| total_amount_due | Nonnegative decimal string, exactly two places, at most 12 integer digits |
-| currency | Three uppercase letters; format checked, currency-code registry not checked |
-
-For example, `"0.00"` is known zero, `null` is unknown, and `0` is invalid for
-this contract. Money uses strings to avoid floating-point rounding. This narrow
-contract deliberately excludes credit balances, line items and currency
-conversion; extend it explicitly if your task needs them.
-
-`success` requires all fields non-null and no issues. `partial` requires at least
-one known and one null field, with an issue for each null field and no others.
-`failed` requires all fields null and exactly one `document` issue. Issue codes
-are `missing`, `ambiguous`, `unreadable`, `unsupported`. These codes are compared
-exactly. No free-form warning is silently ignored.
+The authoritative written format is the answer-free
+[output contract](OUTPUT_CONTRACT.md). The executable validator is
+[contracts.py](../wxo_starter/contracts.py). Keep the contract, not this guide,
+in the extraction context.
 
 ## Run and interpret
 

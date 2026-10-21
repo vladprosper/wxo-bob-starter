@@ -61,6 +61,8 @@ The staged folder contains:
 - `.bob/custom_modes.yaml`: one mode, `wxo-agent-architect`.
 - `.bob/skills/wxo-agent-architect/`: skill and three focused references.
 - `wxo-project.example.md`: facts to establish for this specific project.
+- `prompts/`: six-step Build with Bob walkthrough, worked scenario and troubleshooting.
+- `docs/OUTPUT_CONTRACT.md` and `docs/BOB_ACCEPTANCE.md`: clean format and evidence record.
 - License, attribution and provenance files.
 
 Copy the profile example to `wxo-project.md` and fill it with observed facts.
@@ -70,7 +72,9 @@ Do not put API keys in the profile. An unfilled profile is intentionally not a
 valid deployment target.
 
 Open the folder in Bob. Check that the mode appears and start a fresh task to
-verify skill loading. Follow [BOB_ACCEPTANCE.md](BOB_ACCEPTANCE.md).
+verify skill loading. Follow [Build with Bob](../prompts/README.md) and record
+[BOB_ACCEPTANCE.md](BOB_ACCEPTANCE.md). Keep the original checkout, answer keys
+and evaluation reports outside the extraction task. Staging deliberately excludes them.
 
 ## Existing project
 
